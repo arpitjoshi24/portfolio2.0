@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    
+<style>
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+
+.nav-link {
+    color: #fff; 
+}
+
+/* Hamburger Icon Styles */
+.hamburger {
+    display: none; /* Hide the hamburger icon by default on larger screens */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Display the hamburger icon on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide the navigation links on smaller screens by default */
+    }
+
+    .nav-links.show {
+        display: block; /* Show the navigation links when the menu is open */
+    }
+}
+#grad1 {
+  height: 390px;
+  border-style: solid;
+  border-top-color: #f06 ;
+  border-bottom-color: #0f6;
+  border-left-color: #ff0;
+  border-right-color: #00f;
+}
+#grad2 {
+  height: 390px;
+  border-style: solid;
+  border-top-color: rgb(42, 212, 12) ;
+  border-bottom-color: rgb(234, 0, 255);
+  border-left-color: rgb(255, 68, 0);
+  border-right-color: rgb(191, 255, 0);
+}
+#grad3 {
+  height: 390px;
+  border-style: solid;
+  border-top-color: #f06 ;
+  border-bottom-color: #0f6;
+  border-left-color: #ff0;
+  border-right-color: #00f;
+}
+
+@keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service:hover {
+            animation: fadeInUp 1.5s ease-out;
+        }
+        *{
+            scroll-behavior: smooth;
+        }
+        
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .animate-fade-in {
+        animation: fade-in 1s ease-in-out;
+    }
+  
+    .rainbow-border {
+    border: 4px solid transparent; /* Add a transparent border */
+    border-image: linear-gradient(45deg, #f06, #f06 16.666%, #ff0 16.666%, #ff0 33.333%, #0f6 33.333%, #0f6 50%, #00f 50%, #00f 66.666%, #f06 66.666%, #f06 83.333%, #ff0 83.333%);
+    border-image-slice: 1; /* Ensure the entire border is filled with the gradient */
+    background-color: black; /* Set the background color to black */
+    
+  }
+
+  @keyframes rainbow-border-animation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+</style>
+
+</style>
+</head>
+<body class="bg-black">
+  <section>
+    
+
+    <nav class="text-white">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" class="flex items-center">
+
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Arpit</span>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border b rounded-lg b md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
+            <li>
+              <a href="#home" class="block py-1 px-2 text-white  rounded-xl  hover:text-black hover:bg-white">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="block py-1 px-2 text-white  rounded-xl  hover:text-black hover:bg-white">About</a>
+            </li>
+            <li>
+              <a href="#oservices" class="block py-1 px-2 text-white  rounded-xl  hover:text-black hover:bg-white">Services</a>
+            </li>
+            <li>
+              <a href="#skiils" class="block py-1 px-2 text-white  rounded-xl  hover:text-black hover:bg-white">skills</a>
+            </li>
+            <li>
+              <a href="#contact" class="block py-1 px-2 text-white  rounded-xl  hover:text-black hover:bg-white">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- home section -->
+  <section id="home">
+  <div class=" block sm:flex text-white">
+    <div class="mx-4 sm:ml-56  my-24 sm:my-44">
+        <h1 class="text-6xl">hello<span class="text-orange-400">.</span></h1>
+        <h3 class="text-3xl sm:text-4xl pt-4"> <span class="text-orange-400">&#8212;</span> i'am Arpit Joshi</h3>
+        <h2 class="text-xl font-semibold mt-5"><span id="typewriter" class="typewriter-animation"> </span>.</h2>
+        <button class="px-2 py-1 mt-6 bg-orange-400 hover:bg-orange-400">download cv</button>
+        
+    </div>
+    <div class=" ">
+        <img class="hidden sm:block ml-2 sm:ml-80 grayscale hover:grayscale-0  service" src="photo_2023-09-26_20-55-24-removebg-preview.png" alt="" width="500vw" >
+    </div>
+  </div>
+  </section>
+  <hr class="border-2 border-orange-600">
+  <hr class="mt-1 border-2 border-orange-600">
+
+  <!-- about me -->
+  <section class="mt-12 " id="about">
+    <h1 class="text-6xl  ml-2 pl-1 sm:ml-96 sm:pl-80 text-orange-400 ">About Me</h1>
+    <div class=" block sm:flex mt-24">
+        <div class="mx-4 sm:ml-56">
+            <img class="grayscale hover:grayscale-0 hover:shadow-2xl hover:shadow-red-300 service" src="photo_2023-06-10_00-04-02.jpg" alt="" width="500vw">
+        </div>
+        <div class="">
+            
+            <p class="mt-4 text-xl text-white mt-24 mx-4 sm:mx-24 ">Hi i'm ARPIT , a front-end Web Developer from India, and
+                i've more than 7 months of web designing experience.</p>
+            <p class="mt-4 text-xl text-white mt-1  mx-4 sm:mx-24">I love to combining the logic and creative design to
+                make user friendly websites. I create custom websites to help enterpreneurs to do better
+                online.</p>
+                <button class=" mt-4 text-lg text-white mt-1 ml-6 sm:ml-96 px-2 py-1 mt-6 bg-orange-400 hover:bg-orange-400">learn more</button>
+        </div>
+
+    </div>
+  </section>
+  <hr class=" mt-12 border-2 border-orange-600">
+  <hr class=" mt-1 border-2 border-orange-600">
+  <!-- services -->
+  <section >
+    <h1 class="text-6xl  ml-2 pl-1 sm:ml-96 sm:pl-80 text-orange-400  mt-16  " id="oservices">our services</h1>
+    <div class="flex sm:flex-row flex-col text-white justify-evenly mt-20 space-x-2 ">
+<div class=" rainbow-border text-white py-4 px-1 sm:px-2 w-96 h-auto shadow hover:shadow-2xl  hover:shadow-red-700 my-5 sm:my-0  sm:mx-0 sm:transition sm:ease-in-out sm:delay-150  sm:hover:-translate-y-1 sm:hover:scale-110" id="grad1">
+  <h1 class="text-red-500 text-3xl sm:text-5xl   " >Bootstrap</h1>
+  <p class="py-3 text-md sm:text-lg">As a Bootstrap Developer, I am dedicated to delivering high-quality and visually appealing websites that provide an exceptional user experience across devices. My skills in HTML, CSS, JavaScript, and Bootstrap enable me to create responsive and dynamic web applications. I am passionate about staying up-to-date with the latest web development trends and technologies. I look forward to the opportunity of contributing to projects and creating innovative solutions.</p>
+  </div>
+  <div class="py-4 px-1 sm:px-2 w-96 rainbow-border h-auto shadow hover:shadow-2xl  hover:shadow-blue-600  my-5 sm:my-0  sm:mx-0 sm:transition sm:ease-in-out sm:delay-150  sm:hover:-translate-y-1 sm:hover:scale-110" id="grad2">
+    <h1 class="text-blue-600 text-3xl sm:text-5xl ">Tailwindcss</h1>
+    <p class="py-3 text-md sm:text-lg">I am dedicated to creating modern and visually appealing web interfaces using the power and flexibility of Tailwind CSS. My expertise in HTML, CSS, JavaScript, and Tailwind allows me to build responsive and highly customizable websites. I am passionate about staying up-to-date with the latest web development trends and technologies, continuously expanding my skill set..</p>
+  </div>
+  <div id="grad3" class="py-4 rainbow-border px-1 sm:px-2 w-96 h-auto shadow hover:shadow-2xl  hover:shadow-yellow-300 my-5 sm:my-0  sm:mx-0 sm:transition sm:ease-in-out sm:delay-150  sm:hover:-translate-y-1 sm:hover:scale-110">
+  <h1 class="text-yellow-500 text-3xl sm:text-5xl " >Web Designing</h1>
+  <p class="py-3 text-md sm:text-lg">I am passionate about creating visually stunning and user-centric websites that leave a lasting impression. With a keen eye for design, attention to detail, and a deep understanding of user experience, I strive to craft engaging digital experiences.</p>
+</div>
+    </div>
+  </section>
+
+
+
+ 
+<!-- skills -->
+<hr class=" mt-12 border-2 border-orange-600">
+<hr class=" mt-1 border-2 border-orange-600">
+<section class="text-white ">
+  <h1 class="text-6xl  ml-2 pl-1 sm:ml-96 sm:pl-80 text-orange-400  mt-16  " id="skills">skills</h1>
+  <div class="flex mt-12">
+    <div class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+      <label for="file" class="ml-6 sm:ml-96  text-lg sm:text-2xl">html/css</label>
+      <br>
+      <progress id="file" class="ml-6 sm:ml-96" value="82" max="100"> 32% </progress>
+    </div>
+    <div class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+      <label for="file" class="ml-6 sm:ml-96  text-lg sm:text-2xl">Bootstrap</label>
+      <br>
+      <progress id="file" class="ml-6 sm:ml-96" value="60" max="100"> 32% </progress>
+    </div>
+    
+  </div>
+  <div class="flex mt-6">
+    <div class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+      <label for="file" class="ml-6 sm:ml-96  text-lg sm:text-2xl">JavaScript</label>
+      <br>
+      <progress id="file" class=" ml-6 sm:ml-96" value="22" max="100"> 32% </progress>
+    </div>
+    <div class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+      <label for="file" class="ml-6 sm:ml-96  text-lg sm:text-2xl">Tailwindcss</label>
+      <br>
+      <progress id="file" class="ml-6 sm:ml-96" value="72" max="100"> 32% </progress>
+    </div>
+    
+  </div>
+  <div class="flex mt-6">
+    <div class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+      <label for="file" class="ml-6 sm:ml-96  text-lg sm:text-2xl">MySQL</label>
+      <br>
+      <progress id="file" class="ml-6 sm:ml-96" value="55" max="100"> 32% </progress>
+    </div>
+    <div class="transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
+      <label for="file" class="ml-6 sm:ml-96  text-lg sm:text-2xl">API</label>
+      <br>
+      <progress id="file" class="ml-6 sm:ml-96" value="10" max="100"> 32% </progress>
+    </div>
+    
+  </div>
+  
+</section>
+
+
+<!-- contact section -->
+<hr class=" mt-12 border-2 border-orange-600">
+<hr class=" mt-1 border-2 border-orange-600">
+<section id="contact">
+  <div class="text-white  py-12">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="tetx-white shadow-md rounded-lg overflow-hidden">
+        <div class="p-4 sm:p-6">
+          <h2 class="text-5xl font-semibold text-orange-400">Contact Us</h2>
+          <p class=" mt-2">Have questions? Reach out to us!</p>
+  
+          <form class="mt-6">
+            <div class="mb-4">
+              <label class="block  text-sm font-semibold mb-2" for="name">Name</label>
+              <input
+                class="w-full px-3 py-2 t border rounded-lg focus:outline-none focus:border-indigo-500 transition ease-in-out delay-250  hover:-translate-y-1 hover:scale-105"
+                type="text"
+                id="name"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <label class="block  text-sm font-semibold mb-2" for="email">Email</label>
+              <input
+                class="w-full px-3 py-2  border rounded-lg focus:outline-none focus:border-indigo-500 transition ease-in-out delay-250  hover:-translate-y-1 hover:scale-105"
+                type="email"
+                id="email"
+                placeholder="Your email"
+                required
+              />
+              
+            </div>
+            <div class="mb-4">
+              <label class="block  text-sm font-semibold mb-2" for="message">Message</label>
+              <textarea
+                class="w-full px-3 py-2  border rounded-lg focus:outline-none focus:border-indigo-500 transition ease-in-out delay-250  hover:-translate-y-1 hover:scale-105"
+                id="message"
+                rows="4"
+                placeholder="Your message"
+                required
+              ></textarea>
+            </div>
+            <div class="mt-6">
+              <button
+                class="px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-600 focus:outline-none focus:bg-indigo-600 transition ease-in-out delay-250  hover:-translate-y-1 hover:scale-110"
+                type="submit"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<!-- footer -->
+<footer class="bg-gray-700 text-gray-300 py-4">
+  <div class="container mx-auto text-center">
+    <p>&copy; 2023 Arpit Joshi. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+  <!-- js -->
+  <script>
+    function typeWriter() {
+      const text = "Professional Web Designer";
+      const typewriter = document.getElementById('typewriter');
+      let i = 0;
+      const speed = 150;
+
+      function type() {
+        if (i < text.length) {
+          typewriter.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        } else {
+          typewriter.innerHTML = ''; // Clear the text
+          i = 0; // Reset the index
+          setTimeout(type, speed); // Start again
+        }
+      }
+
+      type();
+    }
+
+    document.addEventListener('DOMContentLoaded', typeWriter);
+
+    
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbarButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
+    const navbarMenu = document.getElementById('navbar-default');
+
+    navbarButton.addEventListener("click", function () {
+      if (navbarMenu.style.display === "block") {
+        navbarMenu.style.display = "none";
+      } else {
+        navbarMenu.style.display = "block";
+      }
+    });
+  });
+
+
+
+  </script>
+</body>
+</html>
